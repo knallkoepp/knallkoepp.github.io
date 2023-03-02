@@ -1,0 +1,110 @@
+<html>
+  <head>
+
+        <script type="text/javascript">
+          var wsUri = "ws://localhost:8080/websocket";
+      function init()
+      {
+        websocket = new WebSocket(wsUri);
+        websocket.onclose = function(evt) { onClose(evt) };
+      }
+      function onClose(evt)
+      {
+        console.log('closing');
+        websocket.close();
+        document.location.reload();
+      }
+      window.addEventListener("load", init, false);
+      </script>
+            <meta charSet="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>
+      KnallKöpp
+    </title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/logoCut.png"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans"/>
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.8.0/css/bulma.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/style/style.css"/>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="/">
+            <img src="/images/logoCut.png" alt="Logo"/>
+          </a>
+          <span class="navbar-burger burger" data-target="navbarMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </div>
+        <div id="navbarMenu" class="navbar-menu">
+          <a class="navbar-item" href="/">
+            Aktuelles
+          </a>
+          <a class="navbar-item" href="/ueberuns.html">
+            Über Uns
+          </a>
+          <a class="navbar-item" href="/hymne.html">
+            Hymne
+          </a>
+          <a class="navbar-item is-active" href="/mitgliedwerden.html">
+            Mitglied werden
+          </a>
+          <a class="navbar-item" href="/kontakt.html">
+            Kontakt
+          </a>
+          <a class="navbar-item" href="/kontakt2.html">
+            Kontakt2
+          </a>
+          <a class="navbar-item" href="https://www.instagram.com/wallenbornerknallkoepp/">
+            <img src="/images/Instagram_icon.png" alt="Logo"/>
+          </a>
+          <a class="navbar-item" href="https://www.facebook.com/profile.php?id=100068512331490">
+            <img src="/images/Facebook_Logo_(2019).png" alt="Logo"/>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <section class="hero is-info is-medium is-bold">
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <h1 class="title">
+            
+          </h1>
+        </div>
+      </div>
+    </section>
+    <div class="container">
+      <section class="articles">
+        <div class="column is-8 is-offset-2">
+          <div class="card article">
+            <div class="card-content">
+              <div class="media-content has-text-centered">
+                <p class="title article-title">
+                  <a>
+                    Mitglied werden
+                  </a>
+                </p>
+                <p class="subtitle is-6 article-subtitle">
+                  <a href="#">
+                    @Gerhard Klassen
+                  </a>
+                  on 1988-01-01
+                </p>
+              </div>
+              <div class="content article-body">
+                <!-- # Session 2023 - Ein Resüme -->
+<p><strong>Du willst Mitglied werden?</strong> Sehr gut! Deinen Antrag kannst du direkt <a href="https://www.google.com">hier</a> herunterladen.</p>
+<p>Bei Fragen kannst du dich gerne per email an uns wenden: <strong>knallkoepp@web.de</strong></p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
