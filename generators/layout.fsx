@@ -41,10 +41,40 @@ let layout (ctx : SiteContents) active bodyCnt =
 
     let menuEntries =
       pages
+      |> Seq.filter (fun p -> p.title.Contains("Aktuelles") || p.title.Contains("Kontakt") || p.title.Contains("Mitglied werden"))
       |> Seq.map (fun p ->
         let cls = if p.title = active then "navbar-item is-active" else "navbar-item"
         a [Class cls; Href p.link] [!! p.title ])
       |> Seq.toList
+
+    let menuEntriesVersch =
+      pages
+      |> Seq.filter (fun p -> p.title.Contains("Über Uns") || p.title.Contains("Hymne"))
+      |> Seq.map (fun p ->
+        let cls = if p.title = active then "navbar-item is-active" else "navbar-item"
+        a [Class cls; Href p.link] [!! p.title ])
+      |> Seq.toList
+    let verschDropDrown = 
+      // div [Class (if pages |> Seq.exists (fun x -> x.title = active) then "navbar-item has-dropdown is-hoverable is-active" else "navbar-item has-dropdown is-hoverable") ] [
+      div [Class "navbar-item has-dropdown is-hoverable"] [
+        a [Class "navbar-link"] [!!"Verschiedenes"]
+        div [Class "navbar-dropdown"] menuEntriesVersch
+      ]  
+
+    let menuEntriesGallery =
+      pages
+      |> Seq.filter (fun p -> p.title.Contains("Galerie"))
+      |> Seq.map (fun p ->
+        let cls = if p.title = active then "navbar-item is-active" else "navbar-item"
+        a [Class cls; Href p.link] [!! p.title ])
+      |> Seq.toList
+
+    let galleryDropDrown = 
+      // div [Class (if pages |> Seq.exists (fun x -> x.title = active) then "navbar-item has-dropdown is-hoverable is-active" else "navbar-item has-dropdown is-hoverable") ] [
+      div [Class "navbar-item has-dropdown is-hoverable"] [
+        a [Class "navbar-link"] [!!"Galerie"]
+        div [Class "navbar-dropdown"] menuEntriesGallery
+      ]
     let instagram = 
       a [Class "navbar-item"; Href "https://www.instagram.com/wallenbornerknallkoepp/"] [
         img [Src "/images/Instagram_icon.png"; Alt "Logo";]
@@ -79,7 +109,7 @@ let layout (ctx : SiteContents) active bodyCnt =
                 ]
                 
               ]
-              div [Id "navbarMenu"; Class "navbar-menu"] (menuEntries@[instagram;facebook])
+              div [Id "navbarMenu"; Class "navbar-menu"] (menuEntries@[verschDropDrown;galleryDropDrown]@[instagram;facebook])
             ]
           ]
           yield! bodyCnt

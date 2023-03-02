@@ -51,9 +51,10 @@ let config = {
         {Script = "index.fsx"; Trigger = Once; OutputFile = MultipleFiles id }
         {Script = "ueberuns.fsx"; Trigger = Once; OutputFile = NewFileName "ueberuns.html" }
         {Script = "kontakt.fsx"; Trigger = Once; OutputFile = NewFileName "kontakt.html" }
-        {Script = "kontakt2.fsx"; Trigger = Once; OutputFile = NewFileName "kontakt2.html" }
         {Script = "mitgliedwerden.fsx"; Trigger = Once; OutputFile = NewFileName "mitgliedwerden.html" }
         {Script = "hymne.fsx"; Trigger = Once; OutputFile = NewFileName "hymne.html" }
+        {Script = "galerie1.fsx"; Trigger = Once; OutputFile = NewFileName "galerie1.html" }
+        {Script = "galerie2.fsx"; Trigger = Once; OutputFile = NewFileName "galerie2.html" }
         // {Script = "hymne.fsx"; Trigger = OnFilePredicate staticTextPredicate; OutputFile = NewFileName "hymne.html" }
         // {Script = "contact.fsx"; Trigger = Once; OutputFile = NewFileName "contact.html" }
     ]
