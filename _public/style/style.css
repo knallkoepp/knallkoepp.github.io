@@ -17,13 +17,12 @@ html,body {
     font-weight: bold;
   }
   .hero-body
-  
   {
     /* background-image: url(https://ucf1fba2af979bfb59c56cad89a8.previews.dropboxusercontent.com/p/thumb/AB0-MuKcUOA5ZIKM98Qataimxk8ruY908nSr2FoczYxW9EWmtSOmTU4UkiYQxWsK7QrKdr-htkMJ6r0rWrdZmJNN_2IrrMWsOb2Eow0fv1A7k6AS8NYiVG1spJpGHl5lY3eiIobjfUsIqJOYNEYGoOh4vY0AQyz5oGVIJAkkGacXqhZyNdFKlbct4ws7qzC7J9iesnvv4zIZh7SF9hcWRaBije0Cy0J6QTxeCfbXgmFUMK_0UG79eQO-MrYmydQFkSHH9TLwveAqgCbMN3EYsze8c-sEm0n15W6sboGTTwn3rC2YkfbbInJzklpO1CgnaalZFMQ9K5kF9A8P0HtnZB1a-uarvy_RTR-INe0B1aMkDkneObA0CK2hYw_CQh0CfvyKOd47LPAKx4FupFB3DtbpguuW5WtHxcNg926cwMp8s4SWMi4vwrIcDKhNnLLO8No/p.jpeg); */
     /* background-image: url(https://ucd804cda1ed387aae0f83acbb4f.previews.dropboxusercontent.com/p/thumb/AB34uyaDZgl0Ma6KuKcDHVt8mbNyNmkSOzte6AwGNE4zCHS2mQXH01qnj8ZHP_BiNcLCPZH2yHVtJJ5dGzJ6wiSofeYqQZyiZOn6AWnpqH3muUbEGeCN1UHIKtBSJ43VuF5V90J-eu_2lwqo5VgSxaNwapE8WVJECdh4rp-2qbJ0oL7KG7gzk07aM6KxpZFPuU8cc5MuBzreTfmbdhVZkTB22iiubN_lcd72PTT1oTpMmeMvMW6ZMZ_984VK3IIXsbR7Hce_dXvWos5LMmtcRUFrDVM6ULjEPuZnBJu6YunM5HbxJnT0Yfl-wEo3H0nEzIGUyirck9G8eV3adEXtESxryyeFXbAIa5k_wEyliIX2EHid4B5dPGYPcsqNpHN1umUV0piHDkj8gSD1bODrlZqFiFAGdE6MT4Z1bNfM5f-UOhTjffp4837UgtoQdmuZlus/p.jpeg); */
     background-image: url(/images/gruppenfoto_small.jpeg);
     background-position: center;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
   height: 500px;
 }
