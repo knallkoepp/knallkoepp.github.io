@@ -6,12 +6,12 @@ open Html
 let generate' (ctx : SiteContents) (_: string) =
   let posts = ctx.TryGetValues<Postloader.Post> () |> Option.defaultValue Seq.empty
   let siteInfo = ctx.TryGetValue<Globalloader.SiteInfo> ()
-  let desc, postPageSize =
+  let _, postPageSize =
     siteInfo
     |> Option.map (fun si -> si.description, si.postPageSize)
     |> Option.defaultValue ("", 10)
 
-
+  let desc = "Aktuelles"
   let psts =
     posts
     |> Seq.sortByDescending Layout.published
@@ -37,7 +37,7 @@ let generate' (ctx : SiteContents) (_: string) =
       else "/" + getFilenameForIndex (i - 1)
 
     Layout.layout ctx "Daheem" [
-      section [Class "hero is-info is-medium is-bold"] [
+      section [Class "hero is-info is-small is-bold"] [
         div [Class "hero-body"] [
           div [Class "container has-text-centered"] [
             h1 [Class "title"] [!!desc]

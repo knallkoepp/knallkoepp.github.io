@@ -46,13 +46,14 @@ let generate' (ctx : SiteContents) (_: string) =
     |> Seq.find (fun n -> n.title = "Wie alles begann")
 
   let siteInfo = ctx.TryGetValue<Globalloader.SiteInfo> ()
-  let desc =
+  let _ =
       siteInfo
       |> Option.map (fun si -> si.description)
       |> Option.defaultValue ""
+  let desc = "Über Uns"
 
   Layout.layout ctx text.title [
-      section [Class "hero is-info is-medium is-bold"] [
+      section [Class "hero is-info is-small is-bold"] [
           div [Class "hero-body"] [
               div [Class "container has-text-centered"] [
                   h1 [Class "title"] [!!desc]

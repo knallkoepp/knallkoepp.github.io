@@ -153,7 +153,7 @@ let textLayout (useSummary: bool) (post: Statictextloader.StaticText) =
     div [Class "card article"] [
         div [Class "card-content"] [
             div [Class "media-content has-text-centered"] [
-                p [Class "title article-title"; ] [a [] [!! post.title]]
+                p [Class "title article-title"; ] [a [] []]//[!! post.title]]
                 p [Class "subtitle is-6 article-subtitle"] [
                 a [Href "#"] [!! (defaultArg post.author "")]
                 !! (sprintf "on %s" (published' post))

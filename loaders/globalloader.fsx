@@ -9,7 +9,7 @@ type SiteInfo = {
 let loader (projectRoot: string) (siteContent: SiteContents) =
     let siteInfo =
         { title = "KnallKöpp";
-          description = ""
+          description = "Willkommen bei den Wallenborner Knallköpp!"
           postPageSize = 5 }
     siteContent.Add(siteInfo)
 
