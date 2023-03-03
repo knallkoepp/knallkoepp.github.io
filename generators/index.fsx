@@ -37,13 +37,13 @@ let generate' (ctx : SiteContents) (_: string) =
       else "/" + getFilenameForIndex (i - 1)
 
     Layout.layout ctx "Daheem" [
-      section [Class "hero is-info is-small is-bold"] [
-        div [Class "hero-body"] [
-          div [Class "container has-text-centered"] [
-            h1 [Class "title"] [!!desc]
-          ]
-        ]
-      ]
+      // section [Class "hero is-info is-small is-bold"] [
+      //   div [Class "hero-body"] [
+      //     div [Class "container has-text-centered"] [
+      //       h1 [Class "title"] [!!desc]
+      //     ]
+      //   ]
+      // ]
       div [Class "container"] [
         section [Class "articles"] [
           div [Class "column is-8 is-offset-2"] psts
