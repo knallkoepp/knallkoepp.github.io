@@ -100,7 +100,7 @@ let layout (ctx : SiteContents) active bodyCnt =
             div [Class "container"] [
               div [Class "navbar-brand"] [
                 a [Class "navbar-item"; Href "/"] [
-                  img [Src "/images/logoCut.png"; Alt "Logo";]
+                  img [Src "/images/logoCut_Large5.png";]// Alt "Logo";Width "112";Height "28"]
                 ]
                 span [Class "navbar-burger burger"; HtmlProperties.Custom ("data-target", "navbarMenu")] [
                   span [] []
