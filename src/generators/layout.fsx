@@ -7,6 +7,8 @@
 #endif
 
 open Html
+[<Literal>]
+let baseUrl = "https://github.com/ZimmerD/KnalliPage/tree/main/src/"
 
 let injectWebsocketCode (webpage:string) =
     let websocketScript =
@@ -116,11 +118,17 @@ let layout (ctx : SiteContents) active bodyCnt =
         ]
     ]
 
+// let render (ctx : SiteContents) cnt =
+//   let disableLiveRefresh = ctx.TryGetValue<Postloader.PostConfig> () |> Option.map (fun n -> n.disableLiveRefresh) |> Option.defaultValue false
+//   cnt
+//   |> HtmlElement.ToString
+//   |> fun n -> if disableLiveRefresh then n else injectWebsocketCode n
 let render (ctx : SiteContents) cnt =
-  let disableLiveRefresh = ctx.TryGetValue<Postloader.PostConfig> () |> Option.map (fun n -> n.disableLiveRefresh) |> Option.defaultValue false
-  cnt
-  |> HtmlElement.ToString
-  |> fun n -> if disableLiveRefresh then n else injectWebsocketCode n
+    cnt
+    |> HtmlElement.ToString
+    #if WATCH
+    |> injectWebsocketCode 
+    #endif
 
 let published (post: Postloader.Post) =
     post.published
