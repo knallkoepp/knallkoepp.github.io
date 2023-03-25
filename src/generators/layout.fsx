@@ -71,14 +71,14 @@ let layout (ctx : SiteContents) active bodyCnt =
             link [Rel "stylesheet"; Href "https://fonts.googleapis.com/css?family=Open+Sans"]
             link [Rel "stylesheet"; Href "https://unpkg.com/bulma@0.8.0/css/bulma.min.css"]
             link [Rel "stylesheet"; Type "text/css"; Href (Globals.prefixUrl "style/style.css")]
-            script [Src "/js/navbar.js";] []//[!! "async"]
+            script [Src (Globals.prefixUrl "js/navbar.js");] []//[!! "async"]
         ]
         body [] [
           nav [Class "navbar"] [
             div [Class "container"] [
               div [Class "navbar-brand"] [
                 a [Class "navbar-item"; Href "/"] [
-                  img [Src "/images/logoCut_Large5.png";]// Alt "Logo";Width "112";Height "28"]
+                  img [Src (Globals.prefixUrl "images/logoCut_Large5.png");]// Alt "Logo";Width "112";Height "28"]
                 ]
                 span [Class "navbar-burger burger"; HtmlProperties.Custom ("data-target", "navbarMenu")] [
                   span [] []
