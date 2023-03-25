@@ -22,7 +22,7 @@ let layout (ctx : SiteContents) active bodyCnt =
       |> Seq.filter (fun p -> p.title.Contains("Aktuelles") || p.title.Contains("Kontakt") || p.title.Contains("Mitglied werden"))
       |> Seq.map (fun p ->
         let cls = if p.title = active then "navbar-item is-active" else "navbar-item"
-        a [Class cls; Href p.link] [!! p.title ])
+        a [Class cls; Href (Globals.prefixUrl p.link)] [!! p.title ])
       |> Seq.toList
 
     let menuEntriesVersch =
@@ -30,7 +30,7 @@ let layout (ctx : SiteContents) active bodyCnt =
       |> Seq.filter (fun p -> p.title.Contains("Über Uns") || p.title.Contains("Hymne"))
       |> Seq.map (fun p ->
         let cls = if p.title = active then "navbar-item is-active" else "navbar-item"
-        a [Class cls; Href p.link] [!! p.title ])
+        a [Class cls; Href (Globals.prefixUrl p.link)] [!! p.title ])
       |> Seq.toList
     let verschDropDrown = 
       // div [Class (if pages |> Seq.exists (fun x -> x.title = active) then "navbar-item has-dropdown is-hoverable is-active" else "navbar-item has-dropdown is-hoverable") ] [
@@ -44,7 +44,7 @@ let layout (ctx : SiteContents) active bodyCnt =
       |> Seq.filter (fun p -> p.title.Contains("Galerie"))
       |> Seq.map (fun p ->
         let cls = if p.title = active then "navbar-item is-active" else "navbar-item"
-        a [Class cls; Href p.link] [!! p.title ])
+        a [Class cls; Href (Globals.prefixUrl p.link)] [!! p.title ])
       |> Seq.toList
 
     let galleryDropDrown = 
@@ -55,11 +55,11 @@ let layout (ctx : SiteContents) active bodyCnt =
       ]
     let instagram = 
       a [Class "navbar-item"; Href "https://www.instagram.com/wallenbornerknallkoepp/"] [
-        img [Src "/images/Instagram_icon.png"; Alt "Logo";]
+        img [Src (Globals.prefixUrl "images/Instagram_icon.png"); Alt "Logo";]
       ]
     let facebook = 
       a [Class "navbar-item"; Href "https://www.facebook.com/profile.php?id=100068512331490"] [
-        img [Src "/images/Facebook_Logo_(2019).png"; Alt "Logo";]
+        img [Src (Globals.prefixUrl "images/Facebook_Logo_(2019).png"); Alt "Logo";]
       ] 
     html [] [
         head [] [
@@ -115,7 +115,7 @@ let postLayout (useSummary: bool) (post: Postloader.Post) =
     div [Class "card article"] [
         div [Class "card-content"] [
             div [Class "media-content has-text-centered"] [
-                p [Class "title article-title"; ] [ a [Href post.link] [!! post.title]]
+                p [Class "title article-title"; ] [ a [Href (Globals.prefixUrl post.link)] [!! post.title]]
                 p [Class "subtitle is-6 article-subtitle"] [
                 a [Href "#"] [!! (defaultArg post.author "")]
                 !! (sprintf "on %s" (published post))
