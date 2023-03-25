@@ -66,7 +66,7 @@ let layout (ctx : SiteContents) active bodyCnt =
             meta [CharSet "utf-8"]
             meta [Name "viewport"; Content "width=device-width, initial-scale=1"]
             title [] [!! ttl]
-            link [Rel "icon"; Type "image/png"; Sizes "32x32"; Href (Globals.prefixUrl "/images/logoCut.png")]
+            link [Rel "icon"; Type "image/png"; Sizes "32x32"; Href (Globals.prefixUrl "images/logoCut.png")]
             link [Rel "stylesheet"; Href "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"]
             link [Rel "stylesheet"; Href "https://fonts.googleapis.com/css?family=Open+Sans"]
             link [Rel "stylesheet"; Href "https://unpkg.com/bulma@0.8.0/css/bulma.min.css"]
