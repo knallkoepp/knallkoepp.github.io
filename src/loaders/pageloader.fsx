@@ -13,4 +13,5 @@ let loader (projectRoot: string) (siteContent: SiteContents) =
     siteContent.Add({title = "Kontakt"; link = "kontakt.html"})
     siteContent.Add({title = "Galerie Kappensitzung 2023"; link = "galerie1.html"})
     siteContent.Add({title = "Galerie Kinderkappensitzung 2023"; link = "galerie2.html"})
+    // siteContent.Add({title = "Galerie Kinderkappensitzung 2024"; link = "galerie3.html"})
     siteContent

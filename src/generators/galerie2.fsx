@@ -26,37 +26,31 @@ let generate' (ctx : SiteContents) (_: string) =
       div [Class "container"] [
           section [Class "articles"] [
               div [Class "column is-8 is-offset-2"] [
-                  script [Src "https://cdn.jsdelivr.net/npm/publicalbum@latest/embed-ui.min.js";HtmlProperties.Custom ("async", "true") ] []//[!! "async"]
-                  div [
-                    Class "pa-carousel-widget"
-                    HtmlProperties.Custom ("style", "width:100%; height:480px; display:none;")
-                    HtmlProperties.Custom ("data-link", "https://photos.google.com/share/AF1QipPinxrTQ1webzNU_Yk1IOMCLiCvIDSwNFCrKaAZGHsup6iP2esxs8ucX9vZpoLAXQ?key=WDFNaG9uTDRRQXpaMWNCb2w2M0tLV1dPOS11SWZB")
-                    HtmlProperties.Custom ("data-autorepeat", "false")
-                    
-                    HtmlProperties.Custom ("data-title", "test")
-                    HtmlProperties.Custom ("data-description", "3 new items added to shared album")
-                    ] [
-                        object [HtmlProperties.Custom ("data", "https://lh3.googleusercontent.com/4INZn2nRehtAoWMDm_7kI1NabMQ1Q63JVHgpbZTHoWjxgfvZPIHIPi9vQ6vggnc92Hgb7dnYozc7j3rfbiOKLMdqWOa70BGtw8aGLwm8hsEjyV9Gu-8mgsrhQJ4pFlxOXnUmcx_1mw=w1920-h1080");HtmlProperties.Custom ("referrerPolicy", "no-referrer")] [] //referrerPolicy="no-referrer"
-                        object [HtmlProperties.Custom ("data", "https://lh3.googleusercontent.com/0OcApcKIit5p-nACNgfuNLFuI-qfoEdBp6tba5pIF--QGtGfGzi2KjWheLhfSixO3bx_Q7dpCoLJ7yL8TrfAx-TAKEPgEA2pzdVU606i5Tw7Lr-QXhgZy9Zu-yAK4xf5pTsoIJUooA=w1920-h1080");HtmlProperties.Custom ("referrerPolicy", "no-referrer")] []
-                        object [HtmlProperties.Custom ("data", "https://lh3.googleusercontent.com/mIAhyCBw4Tx6MKz3C2wTzTHUpWVyKpl-dBKz6-9vGJUqR-MMViQcqbX3EqY1KnH1ucfQWHAhGUG8AI-XPB91w521nZhr1QOEmrypgokeoElK656Yg_UkSxUCg5ofgSq-2qv6wBZGaA=w1920-h1080");HtmlProperties.Custom ("referrerPolicy", "no-referrer")] []
-                  ]
+                  !!"""<script src="https://cdn.jsdelivr.net/npm/publicalbum@latest/embed-ui.min.js" async></script>
+<div class="pa-gallery-player-widget" style="width:100%; height:480px; display:none;"
+  data-link="https://photos.app.goo.gl/TjFwLLCC7eLCjhnr8"
+  data-title="Karneval2023"
+  data-description="13 new items added to shared album">
+  <object data="https://lh3.googleusercontent.com/BRHz10_1bLt5aUbFvvZhsMZIADUzdSvLIuXhJgrVnTy9FrUM3mWqhufl8J_IZx-mGadPsf5znXHPKVGPUHtn7rPp_WZNnEWzxjqQkkF53xil6wbUHOKfAJs07jAk9M7CI-VpZDpFPg=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/o5rkwddUgcxLeJ6qZblgxl9f5Y83YOM9ZEzuyDs3wiDbpDPbtw8Jsjpw6B0kH5D6aKwhaKTf9Jr5OG7EHK97ES5h7NhVIRHXuWZ-4_lNvGCRiuZZefpGp5oM5MCgy1VtBETAkoTV-g=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/nO-Vcv3kQfJSRPyIWO82IybPHAIoj9D8D8fLyeAqUd9K9Ty1pclJZrWBsabH9sPAth4yQtTRbOzy0ckAdXdJrytBKRKzC5xO44j4JcthDn5mldr6FA42b1UNXmjqGxoi7yqd0ZPZqQ=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/8-sezRjpNMqoZmfMAZ-ykbPfeB5-ru54ohoPHlbe-O_c0-1tqtyTf5qr6tFeW4nzgLr9ZP16uMFqcBELUWVUDPfSdfjC7CAhMBvzvqz19XwvXFummchdjHDAYW7ET1EldURUZRyGnQ=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/_RTzSBNQCkcKjIMhes10D9eLb1PZsR3xx1B2B1oT41iNmWZuqxicluSQG4IoE1Irg9NGgXhdwNzJ8yvzY0pAQvowsloaYMgpZ-0U3MejwajL-QJVUgM19taIaNZ7flH0bbE9uQo0Aw=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/YcGseZY5q6sat9qlSR4CYhGlTHcsE1qIbROVnBXnBdxHvitA4d_kFdWksavbhEMJZZcn87Qp1oKM1ZzA776mxxbBHnrmL4M8XmgwyYntK1elNlBIJqLpgIGNuB6zjqdRmlU7sKnvRA=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/HCyt_xkLX1vlEJf-KlsEhb4kc-rbjALnV0jIftReObQ0BTmtZJUUcovRBlX3y_iUDho7J2JtELUaVuP4OrobFf-d5B3dTinJNdlWS-twcfbdMHfRjeu8m7T1xCXJFlwoKAhH16Cd3w=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/_lPNPy2k4HU_M8h_WctYiRGdgExZqQoEjaUefoxNwrq-PN1GwjlwBbH-IhPP2lTIbiev0KbbXtOcqdT8HyeowQe8AkpVA1IHb2aJk7ErFmQJeymDntXc9hwFf7R513YucyA7qLHn6g=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/ps_wJGSWdk_seJQnhzTqTIb_GP2WVlYQu_wl_Ve1sC03GBv_aL7OX6At4WB0LMlhXfAis_YnKUWp0QNC4IQS65VqSBT1LdZyt9N6MAXCsX5gfaqjxUbkUJOwJNAGk56YVj61EW3dqg=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/ZwBdUY3x_vjfxZwvBqA9pUOneSMswiU5_GSjIqyfJPxu9tOqUYiP0Bo7FEDN0-D12mkwJjn4aZ3osCgoGwQxsMgOORoRK67mV9fvFGSttMcWfTl7_CtsFDwgjpatWbWzx6PY9K0Fng=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/HFgXqTkL6Kkgk3sKeS7kc5coEPOaTBRF-bHJlSHUw-T2oghNJuClEmybSA0EhT5rXCeaWKVukmX75W_xvqARzJmCuYxLRFWgQ4fRP7FdQUWuTzgvonBzdF7xbCLtrBjb9Jj84PDG-g=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/v70Qu40EchHE3U1THqT_iiNFjBrOoMNpXdQbGdOXf8C5Fbc0wa8jXtVSLmWbO649EuD9TLnH7LmjTRijiN-eXvGQObuodmCgYhmY9ptRPKjSanShlHYoDlg_hNuS50wLYKbLTYnGKg=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/3IHEmqjHHvxNeDN554aNrWMISsEsi6yej8h4bb5UCOVTi8SlMRUqmUcbR3usQQ740byG1iGq52EVtf_K8IqTZDC7J4wWegdZKx7_PXclOhBnxZKVg6gqW2z2eSHf5qPNTjy8zXCtAg=w1920-h1080"></object>
+</div>
+"""
               ]
           ]
       ]
       
       ]
-
-//  <script src="https://cdn.jsdelivr.net/npm/publicalbum@latest/embed-ui.min.js" async></script>
-// <div class="pa-gallery-player-widget" 
-//   style="width:100%; height:480px; display:none;"
-//   data-link="https://photos.app.goo.gl/aAyjZQwxigpLhmHt7"
-//   data-title="test"
-//   data-description="3 new items added to shared album">
-//   <object data="https://lh3.googleusercontent.com/4INZn2nRehtAoWMDm_7kI1NabMQ1Q63JVHgpbZTHoWjxgfvZPIHIPi9vQ6vggnc92Hgb7dnYozc7j3rfbiOKLMdqWOa70BGtw8aGLwm8hsEjyV9Gu-8mgsrhQJ4pFlxOXnUmcx_1mw=w1920-h1080"></object>
-//   <object data="https://lh3.googleusercontent.com/0OcApcKIit5p-nACNgfuNLFuI-qfoEdBp6tba5pIF--QGtGfGzi2KjWheLhfSixO3bx_Q7dpCoLJ7yL8TrfAx-TAKEPgEA2pzdVU606i5Tw7Lr-QXhgZy9Zu-yAK4xf5pTsoIJUooA=w1920-h1080"></object>
-//   <object data="https://lh3.googleusercontent.com/mIAhyCBw4Tx6MKz3C2wTzTHUpWVyKpl-dBKz6-9vGJUqR-MMViQcqbX3EqY1KnH1ucfQWHAhGUG8AI-XPB91w521nZhr1QOEmrypgokeoElK656Yg_UkSxUCg5ofgSq-2qv6wBZGaA=w1920-h1080"></object>
-// </div>
- 
 
 let generate (ctx : SiteContents) (projectRoot: string) (page: string) =
   generate' ctx page

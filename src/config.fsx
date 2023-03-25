@@ -55,6 +55,7 @@ let config = {
         {Script = "hymne.fsx"; Trigger = Once; OutputFile = NewFileName "hymne.html" }
         {Script = "galerie1.fsx"; Trigger = Once; OutputFile = NewFileName "galerie1.html" }
         {Script = "galerie2.fsx"; Trigger = Once; OutputFile = NewFileName "galerie2.html" }
+        // {Script = "galerie3.fsx"; Trigger = Once; OutputFile = NewFileName "galerie3.html" }
         // {Script = "hymne.fsx"; Trigger = OnFilePredicate staticTextPredicate; OutputFile = NewFileName "hymne.html" }
         // {Script = "contact.fsx"; Trigger = Once; OutputFile = NewFileName "contact.html" }
     ]

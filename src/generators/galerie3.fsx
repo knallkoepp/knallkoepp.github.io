@@ -13,7 +13,7 @@ let generate' (ctx : SiteContents) (_: string) =
       siteInfo
       |> Option.map (fun si -> si.description)
       |> Option.defaultValue ""
-  let desc = "Kappensitzung 2023"
+  let desc = "Kinderkappensitzung 2024"
 
   Layout.layout ctx text.title [
     //   section [Class "hero is-info is-small is-bold"] [
@@ -52,6 +52,8 @@ let generate' (ctx : SiteContents) (_: string) =
       
       ]
 
+
+ 
 
 let generate (ctx : SiteContents) (projectRoot: string) (page: string) =
   generate' ctx page
