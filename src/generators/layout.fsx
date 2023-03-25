@@ -77,7 +77,7 @@ let layout (ctx : SiteContents) active bodyCnt =
           nav [Class "navbar"] [
             div [Class "container"] [
               div [Class "navbar-brand"] [
-                a [Class "navbar-item"; Href "/"] [
+                a [Class "navbar-item"; Href (Globals.prefixUrl "")] [
                   img [Src (Globals.prefixUrl "images/logoCut_Large5.png");]// Alt "Logo";Width "112";Height "28"]
                 ]
                 span [Class "navbar-burger burger"; HtmlProperties.Custom ("data-target", "navbarMenu")] [
