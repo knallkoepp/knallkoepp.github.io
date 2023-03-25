@@ -1,4 +1,6 @@
 #r "../_lib/Fornax.Core.dll"
+#load "../globals.fsx"
+open Globals
 #load "layout.fsx"
 open Html
 
