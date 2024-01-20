@@ -5,7 +5,8 @@ let urlPrefix =
   ""
 #else
 let urlPrefix =
-  "https://knallkoepp.github.io"
+  // "https://knallkoepp.github.io"
+  "http://www.knallkoepp.de"
 #endif
 
 #r "_lib/Fornax.Core.dll"

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Mitglied werden
-author: @Gerhard Klassen
+author: @David Zimmer
 published: 1988-01-01
 ---
 <!-- # Session 2023 - Ein Resüme -->

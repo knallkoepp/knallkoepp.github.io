@@ -55,7 +55,7 @@ html,body {
     /* height: 500px; */
 }
 .articles {
-    margin: 5rem 0;
+    margin: 2rem 0;
     /* margin-top: -290px; */
   }
   .articles .content p {
@@ -77,10 +77,10 @@ html,body {
     margin-bottom: 1rem;
   }
   .media-content {
-    margin-top: 3rem;
+    margin-top: 1rem;
   }
   .article, .promo-block {
-    margin-top: 6rem;
+    margin-top: 1rem;
   }
   div.column.is-8:first-child {
     padding-top: 0;
